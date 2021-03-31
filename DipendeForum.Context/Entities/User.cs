@@ -8,7 +8,7 @@ namespace DipendeForum.Context.Entities
     {   public int UserId { get; set; }
         public string Nickname { get; set; }
         public string Password { get; set; }
-        public DateTime BannTime { get; set; }
+        public DateTime BanTime { get; set; }
         public  string email { get; set; }
 
         public virtual List<Post> Posts { get; set; }
