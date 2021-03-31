@@ -4,7 +4,13 @@ using System.Text;
 
 namespace DipendeForum.Context.Entities
 {
-    class Message
+  public  class Message
     {
+        public int MessageId { get; set; }
+        public int PostId { get; set; }
+        public int UserId { get; set; }
+        public string Text { get; set; }
+        public DateTime PublishTime { get; set; }
+        public bool IsReported { get; set; }
     }
 }
