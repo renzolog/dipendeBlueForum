@@ -7,11 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{364C40A9-487
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{F5A4F3E6-9E3A-4F21-B4DE-2D3B38BEA0F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForum.Context", "DipendeForum.Context\DipendeForum.Context.csproj", "{11FCFA35-1E57-4D45-8B46-CDE97E32B7ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DipendeForum.Context", "DipendeForum.Context\DipendeForum.Context.csproj", "{11FCFA35-1E57-4D45-8B46-CDE97E32B7ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForum.Repositories", "DipendeForum.Repositories\DipendeForum.Repositories.csproj", "{A3C20496-E82B-4828-8F1E-6F0F9FD3B4EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DipendeForum.Repositories", "DipendeForum.Repositories\DipendeForum.Repositories.csproj", "{A3C20496-E82B-4828-8F1E-6F0F9FD3B4EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForum.Mvc", "DipendeForum.Mvc\DipendeForum.Mvc.csproj", "{660C7D29-767C-43A4-8B77-25F3C1EB00FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DipendeForum.Mvc", "DipendeForum.Mvc\DipendeForum.Mvc.csproj", "{660C7D29-767C-43A4-8B77-25F3C1EB00FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{38A24194-4910-4488-B9FB-008F0DE2C031}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
