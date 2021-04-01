@@ -7,11 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{364C40A9-487
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{F5A4F3E6-9E3A-4F21-B4DE-2D3B38BEA0F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForum.Context", "DipendeForum.Context\DipendeForum.Context.csproj", "{11FCFA35-1E57-4D45-8B46-CDE97E32B7ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DipendeForum.Context", "DipendeForum.Context\DipendeForum.Context.csproj", "{11FCFA35-1E57-4D45-8B46-CDE97E32B7ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForum.Repositories", "DipendeForum.Repositories\DipendeForum.Repositories.csproj", "{A3C20496-E82B-4828-8F1E-6F0F9FD3B4EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DipendeForum.Repositories", "DipendeForum.Repositories\DipendeForum.Repositories.csproj", "{A3C20496-E82B-4828-8F1E-6F0F9FD3B4EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForum.Mvc", "DipendeForum.Mvc\DipendeForum.Mvc.csproj", "{660C7D29-767C-43A4-8B77-25F3C1EB00FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DipendeForum.Mvc", "DipendeForum.Mvc\DipendeForum.Mvc.csproj", "{660C7D29-767C-43A4-8B77-25F3C1EB00FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{38A24194-4910-4488-B9FB-008F0DE2C031}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForumDomain", "DipendeForumDomain\DipendeForumDomain.csproj", "{6018DCD4-C4E9-4966-B225-A897D49B89C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForumInterfaces", "DipendeForumInterfaces\DipendeForumInterfaces.csproj", "{112CB6AD-F421-41EB-A48B-393D5D2F2AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForumService", "DipendeForumService\DipendeForumService.csproj", "{BA5066DF-3D32-4EBF-9B91-3748647AEBDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DipendeForumMapper", "DipendeForumMapper\DipendeForumMapper.csproj", "{C24500E4-7565-44BA-B8EB-E3C67DC1C25C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +41,22 @@ Global
 		{660C7D29-767C-43A4-8B77-25F3C1EB00FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{660C7D29-767C-43A4-8B77-25F3C1EB00FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{660C7D29-767C-43A4-8B77-25F3C1EB00FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6018DCD4-C4E9-4966-B225-A897D49B89C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6018DCD4-C4E9-4966-B225-A897D49B89C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6018DCD4-C4E9-4966-B225-A897D49B89C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6018DCD4-C4E9-4966-B225-A897D49B89C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{112CB6AD-F421-41EB-A48B-393D5D2F2AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{112CB6AD-F421-41EB-A48B-393D5D2F2AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{112CB6AD-F421-41EB-A48B-393D5D2F2AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{112CB6AD-F421-41EB-A48B-393D5D2F2AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA5066DF-3D32-4EBF-9B91-3748647AEBDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5066DF-3D32-4EBF-9B91-3748647AEBDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5066DF-3D32-4EBF-9B91-3748647AEBDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5066DF-3D32-4EBF-9B91-3748647AEBDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C24500E4-7565-44BA-B8EB-E3C67DC1C25C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C24500E4-7565-44BA-B8EB-E3C67DC1C25C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C24500E4-7565-44BA-B8EB-E3C67DC1C25C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C24500E4-7565-44BA-B8EB-E3C67DC1C25C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +65,10 @@ Global
 		{11FCFA35-1E57-4D45-8B46-CDE97E32B7ED} = {364C40A9-4872-4FD7-9853-61ED8CEDBDB5}
 		{A3C20496-E82B-4828-8F1E-6F0F9FD3B4EE} = {364C40A9-4872-4FD7-9853-61ED8CEDBDB5}
 		{660C7D29-767C-43A4-8B77-25F3C1EB00FF} = {F5A4F3E6-9E3A-4F21-B4DE-2D3B38BEA0F0}
+		{6018DCD4-C4E9-4966-B225-A897D49B89C8} = {38A24194-4910-4488-B9FB-008F0DE2C031}
+		{112CB6AD-F421-41EB-A48B-393D5D2F2AC5} = {38A24194-4910-4488-B9FB-008F0DE2C031}
+		{BA5066DF-3D32-4EBF-9B91-3748647AEBDD} = {38A24194-4910-4488-B9FB-008F0DE2C031}
+		{C24500E4-7565-44BA-B8EB-E3C67DC1C25C} = {364C40A9-4872-4FD7-9853-61ED8CEDBDB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72EF93E6-BE71-4F2B-B046-1999F48A3150}
