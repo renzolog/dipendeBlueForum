@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DipendeForum.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace DipendeForum.Mvc
 {
@@ -22,6 +24,11 @@ namespace DipendeForum.Mvc
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionString = Configuration
+                .GetValue<string>("ConnectionStrings:ForumDbConnectionString");
+
+            services.AddDbContext<ForumDbContext>(opt => opt.UseSqlServer(connectionString));
+
             services.AddControllersWithViews();
         }
 
