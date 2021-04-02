@@ -14,5 +14,7 @@ namespace DipendeForum.Context.Entities
         public string Text { get; set; }
         public DateTime PublishedTime { get; set; }
         public bool isReported { get; set; }
+        public int like { get; set; } = 0;
+        public int dislike { get; set; } = 0;
     }
 }
