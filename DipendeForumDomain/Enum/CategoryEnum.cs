@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿
 namespace DipendeForumDomain.Enum
 {
     public enum CategoryEnum : byte
@@ -19,6 +16,5 @@ namespace DipendeForumDomain.Enum
         Automotive,
         Game,
         Book
-
     }
 }
