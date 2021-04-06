@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DipendeForum.Context.Entities;
 using DipendeForumDomain.Enum;
 
-namespace DipendeForumDomain
+namespace DipendeForumDomain.DomainClass
 {
     // int postId, int UserId, string category, string title, bool isClosed, datetima last comment
     public class PostDomain

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DipendeForum.Context.Entities
+namespace DipendeForumDomain.DomainClass
 {
     public class MessageDomain
     {
