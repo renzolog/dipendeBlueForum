@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DipendeForum.Context.Entities;
 
-namespace DipendeForumDomain
+namespace DipendeForumDomain.DomainClass
 {
     public class UserDomain
     {

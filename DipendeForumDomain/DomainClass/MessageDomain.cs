@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DipendeForum.Context.Entities
+namespace DipendeForumDomain.DomainClass
 {
     public class MessageDomain
     {
