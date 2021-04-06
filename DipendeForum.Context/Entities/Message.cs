@@ -11,6 +11,5 @@ namespace DipendeForum.Context.Entities
         public int MessagePoint { get; set; }
         public bool IsReported { get; set; }
         public DateTime PublishTime { get; set; }
-        public bool IsReported { get; set; }
     }
 }
