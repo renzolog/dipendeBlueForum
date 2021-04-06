@@ -1,2 +1,0 @@
-# dipendeBlueForum
-Ciao Simone
