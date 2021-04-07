@@ -8,5 +8,6 @@ namespace DipendeForum.Repositories.Repositories
 {
     public class PostRepository : Repository<Post>, IPostRepository
     {
+        
     }
 }

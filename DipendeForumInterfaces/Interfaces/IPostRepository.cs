@@ -6,6 +6,6 @@ namespace DipendeForumInterfaces.Interfaces
 {
     public interface IPostRepository : IRepository<Post>
     {
-
+        
     }
 }
