@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DipendeForum.Context.Interfaces
 {
@@ -7,7 +8,7 @@ namespace DipendeForum.Context.Interfaces
         public void Add();
         public void Delete();
         public void Update();
-        public T GetAll();
+        public List<T> GetAll();
         public T GetById();
     }
 }
