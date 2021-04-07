@@ -7,7 +7,7 @@ namespace DipendeForumDomain.DomainClass
     public class UserDomain
     {
         //Id, nickname, password, email, ban, messages, posts, (virtual)
-
+        //Ecco il commento grazie <3
         public int Id { get; set; }
         public string Nickname { get; set; }
         public string Password { get; set; }

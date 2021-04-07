@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
-namespace DipendeForum.Context.Interfaces
+namespace DipendeForumInterfaces
 {
     public interface IRepository<T>
     {
-        public void Add();
+        public void Add ();
         public void Delete();
         public void Update();
-        public List<T> GetAll();
-        public T GetById();
+        public IEnumerable<T> GetAll();
+        public  T GetById();
     }
+    
 }
