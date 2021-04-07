@@ -8,7 +8,12 @@ namespace DipendeForum.Repositories.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        public void cane()
+        public User GetByUsername(string _username)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateUserToBan(int id, DateTime _time)
         {
             throw new NotImplementedException();
         }

@@ -6,6 +6,7 @@ namespace DipendeForumInterfaces.Interfaces
 {
     public interface IUserRepository : IRepository<User>
     {
-        void cane();
+        public void UpdateUserToBan(int id, DateTime _time);
+        public User GetByUsername(string _username);
     }
 }
