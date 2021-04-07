@@ -6,7 +6,6 @@ namespace DipendeForum.Context.Entities
     public class Post
     {
         public int Id { get; set; }
-        public int UserId { get; set; } //Fk
         public string Title { get; set; }
         public string Category { get; set; }
         public string Description { get; set; }
@@ -14,6 +13,7 @@ namespace DipendeForum.Context.Entities
         public bool IsClosed { get; set; }
         public DateTime PublishTime { get; set; }
         public User LastUser { get; set; }
+        public User User_Fk { get; set; }
 
         public virtual List<Message> Messages { get; set; }
     }
