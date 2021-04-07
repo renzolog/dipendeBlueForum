@@ -1,10 +1,11 @@
 ﻿using System;
+using DipendeForum.Context.Entities;
 using System.Collections.Generic;
-using System.Text;
 
 namespace DipendeForumInterfaces.Interfaces
 {
-    class IMessageRepository
+    public interface IMessageRepository : IRepository<Message>
     {
+
     }
 }
