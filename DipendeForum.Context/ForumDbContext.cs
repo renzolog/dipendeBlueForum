@@ -7,7 +7,7 @@ namespace DipendeForum.Context
     {
         public ForumDbContext()
         {
-
+           
         }
 
         public ForumDbContext(DbContextOptions<ForumDbContext> options) : base(options)
