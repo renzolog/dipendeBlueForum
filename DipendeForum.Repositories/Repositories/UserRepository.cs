@@ -1,4 +1,5 @@
-﻿using DipendeForum.Context.Entities;
+﻿using DipendeForum.Context;
+using DipendeForum.Context.Entities;
 using DipendeForumInterfaces.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,14 @@ namespace DipendeForum.Repositories.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
+        private readonly ForumDbContext _ForumDbContext;
+
+        public UserRepository(ForumDbContext ctx)
+        {
+            _ForumDbContext = ctx;
+        }
+
+
         public User GetByUsername(string _username)
         {
             throw new NotImplementedException();
