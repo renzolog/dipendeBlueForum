@@ -6,7 +6,7 @@ namespace DipendeForumDomain.DomainClass
     {
         public int Id { get; set; }
         public int PostId { get; set; } //Fk
-        public int UserId { get; set; } //Fk
+        public UserDomain User { get; set; } //Fk
         public string Text { get; set; }
         public int MessagePoint { get; set; }
         public bool IsReported { get; set; }
