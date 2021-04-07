@@ -9,7 +9,6 @@ namespace DipendeForumDomain.DomainClass
     public class PostDomain
     {
         public int Id { get; set; }
-        public int UserId { get; set; } //Fk
         public string Title { get; set; }
         public CategoryEnum Category { get; set; }
         public string Description { get; set; }
@@ -17,6 +16,7 @@ namespace DipendeForumDomain.DomainClass
         public bool IsClosed { get; set; }
         public DateTime PublishTime { get; set; }
         public UserDomain LastUser { get; set; }
+        public UserDomain User_Fk { get; set; }
         public List<MessageDomain> Messages { get; set; }
 
     }
