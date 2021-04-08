@@ -10,12 +10,10 @@ namespace DipendeForum.Repositories.Repositories
 {
     public class UserRepository : Repository<User>, IUserRepository
     {
-        private readonly ForumDbContext _ForumDbContext;
         private readonly MappingProfiles _MappingProfiles;
 
-        public UserRepository(ForumDbContext ctx, MappingProfiles mpp)
+        public UserRepository(ForumDbContext ctx, MappingProfiles mpp) : base(ctx)
         {
-            _ForumDbContext = ctx;
             _MappingProfiles = mpp;
         }
 

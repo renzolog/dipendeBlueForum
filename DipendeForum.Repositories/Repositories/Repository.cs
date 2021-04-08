@@ -9,7 +9,7 @@ namespace DipendeForum.Repositories.Repositories
 {
     public class Repository<T> : IRepository<T>
     {
-        private readonly ForumtDbContext _ctx;
+        protected readonly ForumDbContext _ctx;
         public Repository(ForumDbContext ctx)
         {
             _ctx = ctx;
@@ -20,47 +20,47 @@ namespace DipendeForum.Repositories.Repositories
             {
                 case ("User"):
                     _ctx.User.Add(obj);
-                    break;                
+                    break;
 
                 case ("Post"):
                     _ctx.Post.Add(obj);
-                    break;            
-                
+                    break;
+
                 case ("Message"):
                     _ctx.User.Add(obj);
                     break;
-                
+
                 Default:
                     throw new Exception("Mbecille che hai postato?");
                     break;
             }
-                    _ctx.SaveChanges();
-            
+            _ctx.SaveChanges();
+
         }
 
         public void Delete( int id)
         {
-            switch (typeof(T).Name) { 
+            switch (typeof(T).Name) {
             case ("User"):
-            var toDeleteUser = _ctx.User.Where(u=>u.Id == id).FirstOrDefault();
-            _ctx.User.Remove(toDeleteUser);
-            break;                
+                var toDeleteUser = _ctx.User.Where(u=>u.Id == id).FirstOrDefault();
+                _ctx.User.Remove(toDeleteUser);
+                break;
 
             case ("Post"):
                 var toDeletePost = _ctx.Post.Where(u => u.Id == id).FirstOrDefault();
                 _ctx.Post.Remove(toDeletePost);
 
-                    break;            
-                
+                break;
+
             case ("Message"):
                 var toDeleteMessage = _ctx.Message.Where(u => u.Id == id).FirstOrDefault();
                 _ctx.Message.Remove(toDeleteMessage);
 
-                    break;
+                break;
 
             Default:
-            throw new Exception("Mbecille che hai postato?");
-            break;
+                throw new Exception("Mbecille che hai postato?");
+                break;
         }
             _ctx.SaveChanges();
         }
@@ -116,14 +116,10 @@ namespace DipendeForum.Repositories.Repositories
                     return Message;
 
                     break;
-
-                   
-
             }
-
         }
 
-        public void Update()
+        public void Update(T obj)
         {
             throw new NotImplementedException();
         }
