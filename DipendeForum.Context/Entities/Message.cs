@@ -4,6 +4,7 @@ namespace DipendeForum.Context.Entities
 {
   public  class Message
     {
+        //sjdhlsljsljsjsòj
         public int Id { get; set; }
         public string Text { get; set; }
         public int MessagePoint { get; set; }
