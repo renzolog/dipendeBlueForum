@@ -1,6 +1,7 @@
 ﻿using DipendeForum.Context;
 using DipendeForum.Context.Entities;
 using DipendeForumInterfaces.Interfaces;
+using DipendeForumMapper;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,10 +11,12 @@ namespace DipendeForum.Repositories.Repositories
     public class UserRepository : Repository<User>, IUserRepository
     {
         private readonly ForumDbContext _ForumDbContext;
+        private readonly MappingProfiles _MappingProfiles;
 
-        public UserRepository(ForumDbContext ctx)
+        public UserRepository(ForumDbContext ctx, MappingProfiles mpp)
         {
             _ForumDbContext = ctx;
+            _MappingProfiles = mpp;
         }
 
 

@@ -8,4 +8,9 @@
     <PackageReference Include="AutoMapper" Version="10.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DipendeForum.Context\DipendeForum.Context.csproj" />
+    <ProjectReference Include="..\DipendeForumDomain\DipendeForumDomain.csproj" />
+  </ItemGroup>
+
 </Project>

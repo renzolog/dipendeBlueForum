@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DipendeForumService", "Dipe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DipendeForumMapper", "DipendeForumMapper\DipendeForumMapper.csproj", "{C24500E4-7565-44BA-B8EB-E3C67DC1C25C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumWebAPI", "ForumWebAPI\ForumWebAPI.csproj", "{2B453960-1431-4E85-86DD-160F206013BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForumWebAPI", "ForumWebAPI\ForumWebAPI.csproj", "{2B453960-1431-4E85-86DD-160F206013BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
