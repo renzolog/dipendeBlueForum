@@ -6,7 +6,7 @@ using DipendeForumDomain.Enum;
 
 namespace DipendeForumInterfaces.Interfaces
 {
-    public interface IPostRepository : IRepository<Post>
+    public interface IPostRepository : IRepository<PostDomain>
     {
         public List<Post> GetAllByUser(UserDomain userDomain);
         public List<Post> GetAllByCategory(Enum category);

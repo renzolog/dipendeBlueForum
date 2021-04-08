@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DipendeForum.Context\DipendeForum.Context.csproj" />
+    <ProjectReference Include="..\DipendeForumDomain\DipendeForumDomain.csproj" />
     <ProjectReference Include="..\DipendeForumInterfaces\DipendeForumInterfaces.csproj" />
     <ProjectReference Include="..\DipendeForumMapper\DipendeForumMapper.csproj" />
   </ItemGroup>
