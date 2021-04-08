@@ -43,6 +43,7 @@ namespace DipendeForum.Repositories.Repositories
         public void Delete(int id)
         {
             var toDelete = _ctx.Users.Where(u => u.Id == id).FirstOrDefault();
+           
             _ctx.Users.Remove(toDelete);
             _ctx.SaveChanges();
         }
