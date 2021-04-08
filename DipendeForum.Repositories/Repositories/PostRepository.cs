@@ -61,9 +61,36 @@ namespace DipendeForum.Repositories.Repositories
 
         public PostDomain GetById(int id)
         {
-            var user = _ctx.Posts.Where(u => u.Id == id).FirstOrDefault();
+            var user = _ctx.Posts.FirstOrDefault(u => u.Id == id);
             var userToGet = _MappingProfiles.Map<PostDomain>(user);
             return userToGet;
+        }
+
+        public List<PostDomain> GetAllByUser(int userId)
+        {
+            var postListEntities = _ctx.Posts.Where(p=> p.Id == userId);
+
+            var postDomainList = _MappingProfiles
+                .ProjectTo<PostDomain>(postListEntities).ToList();
+
+            return postDomainList;
+        }
+
+        public List<PostDomain> GetAllByCategory(Enum category)
+        {
+            var categoryEntities = _MappingProfiles.Map<Enum>(category);   
+
+            var postDomainList = _MappingProfiles
+                .ProjectTo<PostDomain>(IQueryable categoryEntities).ToList();
+
+            return postDomainList;
+        }
+
+        public void UpdateIsClosedStatus(int postId)
+        {
+            var postToUpdate = _ctx.Posts.SingleOrDefault(p => p.Id == postId); //TODO TRY E CATCH
+
+            postToUpdate.IsClosed = !postToUpdate.IsClosed;
         }
     }
 }
