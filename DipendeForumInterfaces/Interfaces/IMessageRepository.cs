@@ -5,7 +5,7 @@ using DipendeForumDomain.DomainClass;
 
 namespace DipendeForumInterfaces.Interfaces
 {
-    public interface IMessageRepository : IRepository<Message>
+    public interface IMessageRepository : IRepository<MessageDomain>
     {
         List<MessageDomain> GetAllByUser(UserDomain userDomain);
         bool UpdateMessageReport(MessageDomain messageDomain);
