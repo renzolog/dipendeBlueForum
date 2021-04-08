@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DipendeForum.Context\DipendeForum.Context.csproj" />
+    <ProjectReference Include="..\DipendeForumDomain\DipendeForumDomain.csproj" />
   </ItemGroup>
 
 </Project>
