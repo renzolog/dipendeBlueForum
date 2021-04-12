@@ -59,9 +59,9 @@ namespace DipendeForum.Repositories.Repositories
 
         public MessageDomain GetById(int id)
         {
-            var user = _ctx.Messages.Where(u => u.Id == id).FirstOrDefault();
-            var userToGet = _mapper.Map<MessageDomain>(user);
-            return userToGet;
+            var message = _ctx.Messages.Where(u => u.Id == id).FirstOrDefault();
+            var messageToGet = _mapper.Map<MessageDomain>(message);
+            return messageToGet;
         }
 
         public List<MessageDomain> GetAllByUser(UserDomain userDomain) // passare id?
