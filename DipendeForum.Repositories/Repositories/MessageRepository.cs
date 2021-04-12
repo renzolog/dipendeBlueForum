@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using DipendeForum.Context;
 using DipendeForumDomain.DomainClass;
 using DipendeForumInterfaces;
@@ -37,7 +38,7 @@ namespace DipendeForum.Repositories.Repositories
 
         public void Update(MessageDomain obj)
         {
-            var message = _ctx.Messages.Where(u => u.Id == obj.Id).FirstOrDefault();
+            var message = _mapper.Map<Message>(obj);
 
             var toUpdate = _ctx.Messages.Where(u => u.Id == obj.Id).FirstOrDefault();
             toUpdate.IsReported = message.IsReported;
