@@ -59,9 +59,9 @@ namespace DipendeForum.Repositories.Repositories
 
         public MessageDomain GetById(int id)
         {
-            var user = _ctx.Messages.Where(u => u.Id == id).FirstOrDefault();
-            var userToGet = _MappingProfiles.Map<MessageDomain>(user);
-            return userToGet;
+            var message = _ctx.Messages.Where(u => u.Id == id).FirstOrDefault();
+            var messageToGet = _MappingProfiles.Map<MessageDomain>(message);
+            return messageToGet;
         }
     }
 }
