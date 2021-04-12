@@ -33,7 +33,7 @@ namespace DipendeForum.Repositories.Repositories
         public void Delete(int id)
         {
             var toDelete = _ctx.Users.Where(u => u.Id == id).FirstOrDefault();
-           
+
             _ctx.Users.Remove(toDelete);
             _ctx.SaveChanges();
 
@@ -42,15 +42,9 @@ namespace DipendeForum.Repositories.Repositories
 
         public void Update(UserDomain obj)
         {
-            var user = _ctx.Users.Where(u => u.Id == obj.Id).FirstOrDefault();
+            var update = _MappingProfiles.Map<User>(obj);
 
-            var toUpdate = _ctx.Users.Where(u => u.Id == obj.Id).FirstOrDefault();
-            toUpdate.Messages = user.Messages;
-            toUpdate.Email = user.Email;
-            toUpdate.Nickname = user.Nickname;
-            toUpdate.BanTime = user.BanTime;
-            toUpdate.Password = user.Password;
-            toUpdate.Posts = user.Posts;
+            _ctx.Users.Update(update);
             _ctx.SaveChanges();
         }
 
