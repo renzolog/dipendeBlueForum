@@ -14,6 +14,7 @@ namespace DipendeForumMapper
         public MappingProfiles()
         {
             CreateMap<User, UserDomain>().ReverseMap();
+            CreateMap<Message, MessageDomain>().ReverseMap();
 
             CreateMap<Post, PostDomain>()
                 .ForMember(destination => destination.Category,

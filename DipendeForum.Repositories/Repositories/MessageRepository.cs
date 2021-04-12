@@ -13,17 +13,17 @@ namespace DipendeForum.Repositories.Repositories
 {
     public class MessageRepository :  IMessageRepository
     {
-        private readonly IMapper _MappingProfiles;
+        private readonly IMapper _mapper;
         private readonly ForumDbContext _ctx;
 
         public MessageRepository(ForumDbContext ctx, IMapper mpp)
         {
             _ctx = ctx;
-            _MappingProfiles = mpp;
+            _mapper = mpp;
         }
         public void Add(MessageDomain obj)
         {
-            var toAdd = _MappingProfiles.Map<Message>(obj);
+            var toAdd = _mapper.Map<Message>(obj);
             _ctx.Messages.Add(toAdd);
             _ctx.SaveChanges();
         }
@@ -53,15 +53,37 @@ namespace DipendeForum.Repositories.Repositories
         public IEnumerable<MessageDomain> GetAll()
         {
             var list = _ctx.Messages;
-            var listToGet = _MappingProfiles.ProjectTo<MessageDomain>(list);
+            var listToGet = _mapper.ProjectTo<MessageDomain>(list);
             return listToGet;
         }
 
         public MessageDomain GetById(int id)
         {
             var user = _ctx.Messages.Where(u => u.Id == id).FirstOrDefault();
-            var userToGet = _MappingProfiles.Map<MessageDomain>(user);
+            var userToGet = _mapper.Map<MessageDomain>(user);
             return userToGet;
+        }
+
+        public List<MessageDomain> GetAllByUser(UserDomain userDomain) // passare id?
+        {
+            var messagesByUser = _ctx.Messages
+                .Where(message => message.Id == userDomain.Id);
+
+            var mappedMessages = _mapper.ProjectTo<MessageDomain>(messagesByUser).ToList();
+
+            return mappedMessages;
+
+        }
+
+        public bool UpdateMessageReport(MessageDomain messageDomain)
+        {
+            var isUpdate = _ctx.Messages
+                .Where(message => message.Id == messageDomain.Id)
+                .FirstOrDefault();
+
+            isUpdate.IsReported = true;
+
+            return isUpdate.IsReported;
         }
     }
 }
