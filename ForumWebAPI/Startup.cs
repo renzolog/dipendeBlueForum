@@ -35,6 +35,7 @@ namespace ForumWebAPI
             #region DI rules
             services.AddDbContext<ForumDbContext>(opt => opt.UseSqlServer(connectionString));
             services.AddAutoMapper(typeof(MappingProfiles));
+            services.AddScoped<PostService>();
             services.AddScoped<MessageService>();
             #endregion
 
