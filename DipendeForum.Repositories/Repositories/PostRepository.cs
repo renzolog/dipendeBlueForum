@@ -7,6 +7,7 @@ using System.Text;
 using AutoMapper;
 using DipendeForum.Context;
 using DipendeForumDomain.DomainClass;
+using DipendeForumDomain.Enum;
 
 namespace DipendeForum.Repositories.Repositories
 {
@@ -60,10 +61,36 @@ namespace DipendeForum.Repositories.Repositories
         }
 
         public PostDomain GetById(int id)
-        {
-            var user = _ctx.Posts.Where(u => u.Id == id).FirstOrDefault();
+        {               
+            var user = _ctx.Posts.FirstOrDefault(u => u.Id == id);
             var userToGet = _MappingProfiles.Map<PostDomain>(user);
+                    
             return userToGet;
+        }
+
+        public List<PostDomain> GetAllByUser(int userId)
+        {              
+            var postListEntities = _ctx.Posts.Where(p => p.Id == userId);
+            var postDomainList = _MappingProfiles
+                .ProjectTo<PostDomain>(postListEntities).ToList();     
+
+            return postDomainList;          
+        }
+        
+        public List<PostDomain> GetAllByCategory(CategoryEnum category)
+        {                            
+            var categoryEntities = _ctx.Posts.Where(c => c.Category == (byte)category);   
+            var postDomainList = _MappingProfiles
+                .ProjectTo<PostDomain>(categoryEntities).ToList(); 
+ 
+            return postDomainList;
+        }
+
+        public void UpdateIsClosedStatus(int postId)
+        {            
+            var postToUpdate = _ctx.Posts.SingleOrDefault(p => p.Id == postId); 
+                postToUpdate.IsClosed = !postToUpdate.IsClosed;       
+           
         }
     }
 }
