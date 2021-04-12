@@ -11,6 +11,6 @@ namespace DipendeForumInterfaces.Interfaces
         public List<PostDomain> GetAllByUser(int userId);
         public List<PostDomain> GetAllByCategory(CategoryEnum category);
         public void UpdateIsClosedStatus(int postId);
-
+       
     }
 }
