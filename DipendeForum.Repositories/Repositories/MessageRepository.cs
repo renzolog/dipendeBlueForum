@@ -50,10 +50,10 @@ namespace DipendeForum.Repositories.Repositories
         }
 
 
-        public IEnumerable<MessageDomain> GetAll()
+        public List<MessageDomain> GetAll()
         {
             var list = _ctx.Messages;
-            var listToGet = _mapper.ProjectTo<MessageDomain>(list);
+            var listToGet = _mapper.ProjectTo<MessageDomain>(list).ToList();
             return listToGet;
         }
 
@@ -84,6 +84,11 @@ namespace DipendeForum.Repositories.Repositories
             isUpdate.IsReported = true;
 
             return isUpdate.IsReported;
+        }
+
+        public List<MessageDomain> getAllByPost(PostDomain post)
+        {
+            return post.Messages.ToList();
         }
     }
 }
