@@ -9,7 +9,7 @@ namespace DipendeForumInterfaces.Interfaces
     public interface IPostRepository : IRepository<PostDomain>
     {
         public List<PostDomain> GetAllByUser(int userId);
-        public List<PostDomain> GetAllByCategory(Enum category);
+        public List<PostDomain> GetAllByCategory(CategoryEnum category);
         public void UpdateIsClosedStatus(int postId);
 
     }
