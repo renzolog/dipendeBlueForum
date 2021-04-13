@@ -51,7 +51,7 @@ namespace DipendeForum.Repositories.Repositories
         public List<UserDomain> GetAll()
         {
             var list = _ctx.Users;
-            var listToGet = _MappingProfiles.ProjectTo<UserDomain>(list);
+            var listToGet = _MappingProfiles.ProjectTo<UserDomain>(list).ToList();
             return listToGet;
         }
 
