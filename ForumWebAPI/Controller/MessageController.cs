@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ForumWebAPI.Controller
 {
-    public class Message
+    public class MessageController
     {
     }
 }
