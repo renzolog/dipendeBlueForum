@@ -48,7 +48,7 @@ namespace DipendeForum.Repositories.Repositories
             _ctx.SaveChanges();
         }
 
-        public IEnumerable<UserDomain> GetAll()
+        public List<UserDomain> GetAll()
         {
             var list = _ctx.Users;
             var listToGet = _MappingProfiles.ProjectTo<UserDomain>(list);

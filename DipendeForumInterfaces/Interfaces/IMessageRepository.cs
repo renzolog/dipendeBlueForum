@@ -9,5 +9,6 @@ namespace DipendeForumInterfaces.Interfaces
     {
         List<MessageDomain> GetAllByUser(UserDomain userDomain);
         bool UpdateMessageReport(MessageDomain messageDomain);
+        public List<MessageDomain> getAllByPost(PostDomain post);
     }
 }

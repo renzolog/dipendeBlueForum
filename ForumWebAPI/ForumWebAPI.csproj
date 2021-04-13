@@ -22,6 +22,7 @@
     <ProjectReference Include="..\DipendeForum.Context\DipendeForum.Context.csproj" />
     <ProjectReference Include="..\DipendeForum.Repositories\DipendeForum.Repositories.csproj" />
     <ProjectReference Include="..\DipendeForumMapper\DipendeForumMapper.csproj" />
+    <ProjectReference Include="..\DipendeForumService\DipendeForumService.csproj" />
   </ItemGroup>
 
 
