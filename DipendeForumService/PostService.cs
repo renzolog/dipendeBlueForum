@@ -5,10 +5,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DipendeForumInterfaces.Iservice;
 
 namespace DipendeForumService
 {
-    public class PostService
+    public class PostService : IPostService
     {
         private readonly IPostRepository repo;
 
