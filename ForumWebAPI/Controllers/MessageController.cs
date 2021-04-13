@@ -17,9 +17,9 @@ namespace ForumWebAPI.Controllers
     {
         private readonly IMessageService _messageService;
         private readonly ILogger<MessageController> _logger;
+
         public MessageController(IMessageService messageService, ILogger<MessageController> logger)
         {
-         
             _messageService = messageService;
             _logger = logger;
         }
@@ -35,7 +35,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -49,7 +50,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -63,7 +65,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -77,7 +80,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500); ;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -91,7 +95,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500); ;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -105,7 +110,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500); ;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -119,7 +125,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500); ;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -133,7 +140,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500); ;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
     }

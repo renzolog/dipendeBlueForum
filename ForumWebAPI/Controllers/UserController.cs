@@ -35,8 +35,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
         [HttpDelete]
@@ -50,11 +50,9 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
-
-
         }
 
         [HttpGet]
@@ -68,14 +66,14 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
         [HttpGet("{id}")]
         public ActionResult<UserDomain> GetById(int id)
-        { 
+        {
             try
             {
                var user= _service.GetById(id);
@@ -84,8 +82,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -101,8 +99,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -117,8 +115,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -133,8 +131,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 

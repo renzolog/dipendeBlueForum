@@ -107,13 +107,13 @@ namespace ForumWebAPI.Controllers
                 _postService.GetAllByUser(userId);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 _logger.LogError(e, e.Message);
                 return StatusCode(500, e);
             }
         }
-      
+
         [HttpPut("{postId}")]
         public ActionResult UpdateIsClosedStatus(int postId)
         {
@@ -122,13 +122,13 @@ namespace ForumWebAPI.Controllers
                 _postService.UpdateIsClosedStatus(postId);
                 return Ok();
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 _logger.LogError(e, e.Message);
                 return StatusCode(500, e);
             }
         }
-       
+
         [HttpGet ("{category}")]
         public ActionResult GetAllByCategory(CategoryEnum category)
         {
@@ -143,7 +143,7 @@ namespace ForumWebAPI.Controllers
                 return StatusCode(500, e);
             }
         }
-        
+
         [HttpPut]
         public ActionResult PointUpDown(int points, int id)
         {
