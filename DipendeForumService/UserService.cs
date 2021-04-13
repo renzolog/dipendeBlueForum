@@ -2,6 +2,9 @@
 using DipendeForumInterfaces.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Text;
+using DipendeForumInterfaces.Interfaces;
+using DipendeForumInterfaces.Iservice;
 
 namespace DipendeForumService
 {
@@ -45,7 +48,7 @@ namespace DipendeForumService
         }
 
         public IEnumerable<UserDomain> GetAll()
-        {
+    { 
             return repo.GetAll();
         }
 

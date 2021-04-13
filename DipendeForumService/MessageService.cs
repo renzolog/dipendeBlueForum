@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DipendeForumDomain.DomainClass;
+using DipendeForumInterfaces.Iservice;
 
 namespace DipendeForumService
 {
-    public class MessageService
+    public class MessageService:IMessageService
     {
         private readonly IMessageRepository repo;
 
