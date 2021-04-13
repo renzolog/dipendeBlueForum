@@ -8,7 +8,7 @@ using DipendeForumInterfaces.Iservice;
 
 namespace DipendeForumService
 {
-    public class UserService
+    public class UserService :IUserService
     {
 
         private readonly IUserRepository repo;
