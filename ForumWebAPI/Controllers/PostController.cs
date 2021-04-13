@@ -3,6 +3,8 @@ using DipendeForumDomain.Enum;
 using DipendeForumInterfaces.Iservice;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using ILogger = NLog.ILogger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +17,11 @@ namespace ForumWebAPI.Controllers
     public class PostController : ControllerBase
     {
         private readonly IPostService _postService;
-
-        public PostController(IPostService postService)
+        private readonly ILogger<PostController> _logger;
+        public PostController(IPostService postService, ILogger<PostController> logger)
         {
             _postService = postService;
+            _logger = logger;
         }
 
         [HttpDelete]
@@ -31,7 +34,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -42,11 +46,11 @@ namespace ForumWebAPI.Controllers
             {
                 _postService.Add(obj);
                 return StatusCode(201);
-
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -60,7 +64,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -74,7 +79,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -88,7 +94,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
 
@@ -102,7 +109,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
       
@@ -116,7 +124,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
        
@@ -130,7 +139,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
         
@@ -144,8 +154,8 @@ namespace ForumWebAPI.Controllers
             }
             catch (Exception e)
             {
-
-                return StatusCode(500);
+                _logger.LogError(e, e.Message);
+                return StatusCode(500, e);
             }
         }
     }
