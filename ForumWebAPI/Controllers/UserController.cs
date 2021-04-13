@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DipendeForum.Context.Entities;
 using DipendeForumDomain.DomainClass;
 using DipendeForumInterfaces.Interfaces;
 using DipendeForumInterfaces.Iservice;
+using Microsoft.Extensions.Logging;
 
 namespace ForumWebAPI.Controllers
 {
@@ -15,11 +17,12 @@ namespace ForumWebAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserService _service;
-        
+        private readonly ILogger<UserController> _logger;
 
-        public UserController(IUserService service)
+        public UserController(IUserService service, ILogger<UserController> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         [HttpPost]

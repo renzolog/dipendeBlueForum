@@ -40,12 +40,9 @@ namespace ForumWebAPI
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPostService, PostService>();
-<<<<<<< HEAD
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<MessageService>();
-=======
             services.AddScoped<IMessageService, MessageService>();
->>>>>>> 0f9f6974c814548a0db76773ffbea9842ea66522
             #endregion
 
             services.AddControllers();

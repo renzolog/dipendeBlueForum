@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using DipendeForumDomain.DomainClass;
 using DipendeForumInterfaces.Iservice;
 using DipendeForumService;
+using Microsoft.Extensions.Logging;
 
 namespace ForumWebAPI.Controllers
 {
@@ -15,10 +16,12 @@ namespace ForumWebAPI.Controllers
     public class MessageController : ControllerBase
     {
         private readonly IMessageService _messageService;
-
-        public MessageController(IMessageService messageService)
+        private readonly ILogger<MessageController> _logger;
+        public MessageController(IMessageService messageService, ILogger<MessageController> logger)
         {
+         
             _messageService = messageService;
+            _logger = logger;
         }
 
         [HttpDelete]
