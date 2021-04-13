@@ -42,7 +42,7 @@ namespace ForumWebAPI.Controllers
             try
             {
                 _service.Delete(id);
-                return StatusCode(201);
+                return Accepted();
 
             }
             catch (Exception e)
@@ -109,7 +109,7 @@ namespace ForumWebAPI.Controllers
             try
             {
                 _service.Update(userDomain);
-                return StatusCode(201);
+                return Accepted();
 
             }
             catch (Exception e)
@@ -125,7 +125,7 @@ namespace ForumWebAPI.Controllers
             try
             {
                 _service.UpdateUserToBan(id, _date);
-                return StatusCode(201);
+                return Accepted();
 
             }
             catch (Exception e)
