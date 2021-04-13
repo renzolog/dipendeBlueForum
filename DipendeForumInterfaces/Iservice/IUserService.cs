@@ -4,7 +4,8 @@ using System.Text;
 
 namespace DipendeForumInterfaces.Iservice
 {
-    interface IUserService
+   public interface IUserService
     {
+        public 
     }
 }
