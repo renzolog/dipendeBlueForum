@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DipendeForumMapper;
+using DipendeForum.Repositories.Repositories;
+using DipendeForumInterfaces.Interfaces;
 using DipendeForumService;
 using DipendeForumInterfaces.Iservice;
 
@@ -36,9 +38,14 @@ namespace ForumWebAPI
             #region DI rules
             services.AddDbContext<ForumDbContext>(opt => opt.UseSqlServer(connectionString));
             services.AddAutoMapper(typeof(MappingProfiles));
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPostService, PostService>();
+<<<<<<< HEAD
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<MessageService>();
+=======
+            services.AddScoped<IMessageService, MessageService>();
+>>>>>>> 0f9f6974c814548a0db76773ffbea9842ea66522
             #endregion
 
             services.AddControllers();
